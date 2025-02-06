@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Atualização Cadastral</title>
     <style>
+        /* ... (seu CSS anterior - mantenha o mesmo) ... */
          body {
             font-family: Arial, sans-serif;
             margin: 20px;
-            background-color: #a2d3ff;
+            background-color: #f4f4f4;
         }
 
         .container {
@@ -22,15 +23,8 @@
 
         h1 {
             text-align: center;
-            color: #333;
-            margin-bottom: 0px;
-        }
-
-        h2 {
-            text-align: center;
-            color: grey;
-            font-size: 15px;
             margin-bottom: 30px;
+            color: #333;
         }
 
         .form-group {
@@ -108,8 +102,7 @@
 
     <div class="container">
         <h1>Formulário de Atualização Cadastral</h1>
-        <h2>Secretaria Municipal de Educação, Esporte e Lazer de Tabocas do Brejo Velho</h2>
-        <form id="cadastroForm" action="https://script.google.com/macros/s/AKfycbyt6j3Lfd3cIqPxS0mpUKTzakFVSANWnHUQBosSl1Z16CJSMNEGpAl87X56kW0ftzqj/exec" method="POST">
+        <form id="cadastroForm" action="https://script.google.com/macros/s/AKfycbwVzNHJQGiwvkf78TB5Cb64b4WXFnB8I1MIA2It86UcelGSIut2yvHtgzSV4qGNTU1w/exec" method="POST">
              <div class="form-group">
                 <label for="nomeCompleto">Nome Completo:</label>
                 <input type="text" id="nomeCompleto" name="nomeCompleto" required>
@@ -122,7 +115,7 @@
 
             <div class="form-group">
                 <label for="cpf">CPF (Apenas números):</label>
-                <input type="text" id="cpf" name="cpf" maxlength="11" pattern="[0-9]{11}" placeholder="Apenas números" required>
+                <input type="text" id="cpf" name="cpf" maxlength="14" pattern="[0-9.-]*" placeholder="Apenas números" required>
             </div>
 
             <div class="form-group">
@@ -223,64 +216,64 @@
                     <option value="Nomeado">Nomeado</option>
                     <option value="Outro">Outro</option>
                 </select>
-            </div>            
-
-            <div class="form-group">
-                <label for="cargoFuncao">Cargo/Função no momento da contratação:</label>
-                <select id="cargoFuncao" name="cargoFuncao" placeholder="Escolha o cargo para o qual você foi contratado" required>
-                    <option value="">Selecione</option>
-                    <option value="Professor">Professor</option>
-                    <option value="Diretor Escolar">Diretor Escolar</option>
-                    <option value="Vice-Diretor Escolar">Vice-Diretor Escolar</option>
-                    <option value="Secretário Escolar">Secretário Escolar</option>
-                    <option value="Auxiliar de Secretaria Escolar">Auxiliar de Secretaria Escolar</option>
-                    <option value="Coordenador Pedagógico">Coordenador Pedagógico</option>
-                    <option value="Auxiliar de Serviços Gerais">Auxiliar de Serviços Gerais</option>
-                    <option value="Merendeira">Merendeira</option>
-                    <option value="Porteiro">Porteiro</option>
-                    <option value="Guarda Noturno">Guarda Noturno</option>
-                    <option value="Bibliotecátio">Bibliotecátio</option>
-                    <option value="Monitor de Pátio">Monitor de Pátio</option>
-                    <option value="Psicóloga">Psicóloga</option>
-                    <option value="Nutricionista">Nutricionista</option>
-                    <option value="Motorista">Motorista</option>
-                    <option value="Cuidador">Cuidador</option>
-                    <option value="Outro">Outro</option>
-                </select>
             </div>
 
             <div class="form-group">
-                <label for="cargaHorariaSemanal">Carga horária semanal:</label>
-                <select id="cargaHorariaSemanal" name="cargaHorariaSemanal" placeholder="Escolha a carga horária exercida" required>
-                    <option value="">Selecione</option>
-                    <option value="20 Horas">20 Horas</option>
-                    <option value="30 Horas">30 Horas</option>
-                    <option value="40 Horas">40 Horas</option>
-                </select>
-            </div>
+              <label for="cargoFuncao">Cargo/Função no momento da contratação:</label>
+              <select id="cargoFuncao" name="cargoFuncao" placeholder="Escolha o cargo para o qual você foi contratado" required>
+                  <option value="">Selecione</option>
+                  <option value="Professor">Professor</option>
+                  <option value="Diretor Escolar">Diretor Escolar</option>
+                  <option value="Vice-Diretor Escolar">Vice-Diretor Escolar</option>
+                  <option value="Secretário Escolar">Secretário Escolar</option>
+                  <option value="Auxiliar de Secretaria Escolar">Auxiliar de Secretaria Escolar</option>
+                  <option value="Coordenador Pedagógico">Coordenador Pedagógico</option>
+                  <option value="Auxiliar de Serviços Gerais">Auxiliar de Serviços Gerais</option>
+                  <option value="Merendeira">Merendeira</option>
+                  <option value="Porteiro">Porteiro</option>
+                  <option value="Guarda Noturno">Guarda Noturno</option>
+                  <option value="Bibliotecátio">Bibliotecátio</option>
+                  <option value="Monitor de Pátio">Monitor de Pátio</option>
+                  <option value="Psicóloga">Psicóloga</option>
+                  <option value="Nutricionista">Nutricionista</option>
+                  <option value="Motorista">Motorista</option>
+                  <option value="Cuidador">Cuidador</option>
+                  <option value="Outro">Outro</option>
+              </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="cargaHorariaSemanal">Carga horária semanal:</label>
+            <select id="cargaHorariaSemanal" name="cargaHorariaSemanal" placeholder="Escolha a carga horária exercida" required>
+                <option value="">Selecione</option>
+                <option value="20 Horas">20 Horas</option>
+                <option value="30 Horas">30 Horas</option>
+                <option value="40 Horas">40 Horas</option>
+            </select>
+        </div>
 
-            <div class="form-group">
-                <label for="escolaLotacao">Lotação:</label>
-                <select id="escolaLotacao" name="escolaLotacao" placeholder="Escolha o seu local de trabalho" required>
-                    <option value="">Selecione</option>
-                    <option value="Divino Pai Eterno">Divino Pai Eterno</option>
-                    <option value="Eurico Gaspar Dutra">Eurico Gaspar Dutra</option>
-                    <option value="Joaquim Correa Mendes">Joaquim Correa Mendes</option>
-                    <option value="Joaquim Pedro da Silva">Joaquim Pedro da Silva</option>
-                    <option value="José Antônio dos Reis">José Antônio dos Reis</option>
-                    <option value="Lúcia Gonçalves de Araújo">Lúcia Gonçalves de Araújo</option>
-                    <option value="Manoel Messias de Oliveira">Manoel Messias de Oliveira</option>
-                    <option value="Maria Angelina dos Santos">Maria Angelina dos Santos</option>
-                    <option value="Professor Magalhães Neto">Professor Magalhães Neto</option>
-                    <option value="Reino da Alegria">Reino da Alegria</option>
-                    <option value="Rui Barbosa - Vereda">Rui Barbosa - Vereda</option>
-                    <option value="Rui Barbosa - Sede">Rui Barbosa - Sede</option>
-                    <option value="Santa Cruz">Santa Cruz</option>
-                    <option value="São Jorge">São Jorge</option>
-                    <option value="Tarcício Augusto da Silva">Tarcício Augusto da Silva</option>
-                    <option value="Outro">Outro</option>
-                </select>
-            </div>
+        <div class="form-group">
+          <label for="escolaLotacao">Lotação:</label>
+          <select id="escolaLotacao" name="escolaLotacao" placeholder="Escolha o seu local de trabalho" required>
+              <option value="">Selecione</option>
+              <option value="Divino Pai Eterno">Divino Pai Eterno</option>
+              <option value="Eurico Gaspar Dutra">Eurico Gaspar Dutra</option>
+              <option value="Joaquim Correa Mendes">Joaquim Correa Mendes</option>
+              <option value="Joaquim Pedro da Silva">Joaquim Pedro da Silva</option>
+              <option value="José Antônio dos Reis">José Antônio dos Reis</option>
+              <option value="Lúcia Gonçalves de Araújo">Lúcia Gonçalves de Araújo</option>
+              <option value="Manoel Messias de Oliveira">Manoel Messias de Oliveira</option>
+              <option value="Maria Angelina dos Santos">Maria Angelina dos Santos</option>
+              <option value="Professor Magalhães Neto">Professor Magalhães Neto</option>
+              <option value="Reino da Alegria">Reino da Alegria</option>
+              <option value="Rui Barbosa - Vereda">Rui Barbosa - Vereda</option>
+              <option value="Rui Barbosa - Sede">Rui Barbosa - Sede</option>
+              <option value="Santa Cruz">Santa Cruz</option>
+              <option value="São Jorge">São Jorge</option>
+              <option value="Tarcício Augusto da Silva">Tarcício Augusto da Silva</option>
+              <option value="Outro">Outro</option>
+          </select>
+      </div>
 
             <div class="form-group">
                 <label for="zonaResidencia">Zona da residência:</label>
@@ -336,7 +329,7 @@
             </div>
 
             <div class="form-group">
-                <label for="endereco">Endereço de residência:</label>
+                <label for="endereco">Endereço (Assim como descrito na conta de energia):</label>
                 <input type="text" id="endereco" name="endereco" required>
             </div>
 
@@ -351,19 +344,19 @@
             </div>
 
             <div class="form-group">
-                <label for="escolaridade">Escolaridade:</label>
-                <select id="escolaridade" name="escolaridade" required>
-                    <option value="">Selecione</option>
-                    <option value="Fundamental Incompleto">Fundamental Incompleto</option>
-                    <option value="Fundamental Completo">Fundamental Completo</option>
-                    <option value="Ensino Médio">Ensino Médio</option>
-                    <option value="Ensino Médio - Magistério">Ensino Médio - Magistério</option>
-                    <option value="Graduação">Graduação</option>
-                    <option value="Pós-graduação">Pós-graduação</option>
-                    <option value="Mestrado">Mestrado</option>
-                    <option value="Doutorado">Doutorado</option>
-                </select>
-            </div>
+              <label for="escolaridade">Escolaridade:</label>
+              <select id="escolaridade" name="escolaridade" required>
+                  <option value="">Selecione</option>
+                  <option value="Fundamental Incompleto">Fundamental Incompleto</option>
+                  <option value="Fundamental Completo">Fundamental Completo</option>
+                  <option value="Ensino Médio">Ensino Médio</option>
+                  <option value="Ensino Médio - Magistério">Ensino Médio - Magistério</option>
+                  <option value="Graduação">Graduação</option>
+                  <option value="Pós-graduação">Pós-graduação</option>
+                  <option value="Mestrado">Mestrado</option>
+                  <option value="Doutorado">Doutorado</option>
+              </select>
+          </div>
 
             <button type="submit">Enviar Atualização Cadastral</button>
         </form>
@@ -375,7 +368,9 @@
             let rgInput = document.getElementById('rg');
             let celularInput = document.getElementById('celular');
 
-            if (cpfInput.value.length !== 11 || isNaN(cpfInput.value)) {
+            let cpfValue = cpfInput.value.replace(/[^\d]/g, ''); // Remove formatação para validação
+
+            if (cpfValue.length !== 11 || isNaN(cpfValue)) {
                 alert("CPF deve conter 11 números.");
                 event.preventDefault(); // Impede o envio do formulário
                 cpfInput.focus();
@@ -398,6 +393,23 @@
 
             // Adicionar mais validações aqui se necessário
             // alert("Formulário enviado com sucesso!"); // Esta linha foi comentada porque a mensagem de sucesso vem do Google Apps Script
+        });
+
+        const cpfInput = document.getElementById('cpf');
+
+        cpfInput.addEventListener('input', function (event) {
+            let value = event.target.value;
+
+            // Remove tudo que não for número
+            value = value.replace(/\D/g, '');
+            value = value.substring(0, 11); // Limita a 11 dígitos
+
+            // Aplica a formatação
+            value = value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca um ponto entre o terceiro e quarto dígitos
+            value = value.replace(/(\d{3})(\d)/, '$1.$2'); // Coloca um ponto entre o sexto e sétimo dígitos (segunda vez para garantir)
+            value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Coloca um hífen entre o nono e décimo dígitos
+
+            event.target.value = value;
         });
     </script>
 
