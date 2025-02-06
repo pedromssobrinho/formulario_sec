@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Atualização Cadastral</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 0px;
+        }
+
+        h2 {
+            text-align: center;
+            color: grey;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="date"],
+        .form-group input[type="email"],
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Important to include padding in width */
+        }
+
+        .form-group select {
+            appearance: none; /* Remove default dropdown arrow in some browsers */
+            -webkit-appearance: none; /* For Safari and Chrome */
+            -moz-appearance: none; /* For Firefox */
+            background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+            background-repeat: no-repeat;
+            background-position-x: 100%;
+            background-position-y: 10px;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .radio-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        /* Media query for responsiveness */
+        @media screen and (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Formulário de Atualização Cadastral</h1>
+        <h2>Secretária Municipal de Educação, Esporte e Lazer <b> de Tabocas do Brejo Velho</b> </h2>
+        <form id="cadastroForm" action="https://script.google.com/macros/s/AKfycbyt6j3Lfd3cIqPxS0mpUKTzakFVSANWnHUQBosSl1Z16CJSMNEGpAl87X56kW0ftzqj/exec" method="POST">
+             <div class="form-group">
+                <label for="nomeCompleto">Nome Completo:</label>
+                <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <input type="date" id="dataNascimento" name="dataNascimento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cpf">CPF (Apenas números):</label>
+                <input type="text" id="cpf" name="cpf" maxlength="11" pattern="[0-9]{11}" placeholder="Apenas números" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rg">RG (Apenas números):</label>
+                <input type="text" id="rg" name="rg" placeholder="Apenas números" required>
+            </div>
+
+            <div class="form-group">
+                <label>Sexo:</label>
+                <div class="radio-group">
+                    <input type="radio" id="sexoMasculino" name="sexo" value="Masculino" required>
+                    <label for="sexoMasculino">Masculino</label>
+                    <input type="radio" id="sexoFeminino" name="sexo" value="Feminino" required>
+                    <label for="sexoFeminino">Feminino</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="corRaca">Cor/Raça:</label>
+                <select id="corRaca" name="corRaca" required>
+                    <option value="">Selecione</option>
+                    <option value="Branca">Branca</option>
+                    <option value="Preta">Preta</option>
+                    <option value="Parda">Parda</option>
+                    <option value="Amarela">Amarela</option>
+                    <option value="Indígena">Indígena</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="estadoCivil">Estado Civil:</label>
+                <select id="estadoCivil" name="estadoCivil" required>
+                    <option value="">Selecione</option>
+                    <option value="Solteiro(a)">Solteiro(a)</option>
+                    <option value="Casado(a)">Casado(a)</option>
+                    <option value="Divorciado(a)">Divorciado(a)</option>
+                    <option value="Viúvo(a)">Viúvo(a)</option>
+                    <option value="União Estável">União Estável</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ufNascimento">UF de Nascimento:</label>
+                <select id="ufNascimento" name="ufNascimento" required>
+                    <option value="">Selecione</option>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="municipioNascimento">Município de Nascimento:</label>
+                <input type="text" id="municipioNascimento" name="municipioNascimento" required>
+            </div>
+
+            <div class="form-group">
+                <label for="celular">Nº de Celular (Com DDD, apenas números):</label>
+                <input type="text" id="celular" name="celular" placeholder="Com DDD, apenas números" pattern="[0-9]{10,11}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email de preferência:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tipoVinculo">Tipo de vínculo:</label>
+                <select id="tipoVinculo" name="tipoVinculo" placeholder="Escolha o seu tipo de vínculo empregatício" required>
+                    <option value="">Selecione</option>
+                    <option value="Efetivo">Concursado</option>
+                    <option value="Temporário">Seletiva</option>
+                    <option value="Terceirizado">Cooperativa</option>
+                    <option value="Nomeado">Nomeado</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>            
+
+            <div class="form-group">
+                <label for="cargoFuncao">Cargo/Função no momento da contratação:</label>
+                <select id="cargoFuncao" name="cargoFuncao" placeholder="Escolha o cargo para o qual você foi contratado" required>
+                    <option value="">Selecione</option>
+                    <option value="Professor">Professor</option>
+                    <option value="Diretor Escolar">Diretor Escolar</option>
+                    <option value="Vice-Diretor Escolar">Vice-Diretor Escolar</option>
+                    <option value="Secretário Escolar">Secretário Escolar</option>
+                    <option value="Auxiliar de Secretaria Escolar">Auxiliar de Secretaria Escolar</option>
+                    <option value="Coordenador Pedagógico">Coordenador Pedagógico</option>
+                    <option value="Auxiliar de Serviços Gerais">Auxiliar de Serviços Gerais</option>
+                    <option value="Merendeira">Merendeira</option>
+                    <option value="Porteiro">Porteiro</option>
+                    <option value="Guarda Noturno">Guarda Noturno</option>
+                    <option value="Bibliotecátio">Bibliotecátio</option>
+                    <option value="Monitor de Pátio">Monitor de Pátio</option>
+                    <option value="Psicóloga">Psicóloga</option>
+                    <option value="Nutricionista">Nutricionista</option>
+                    <option value="Motorista">Motorista</option>
+                    <option value="Cuidador">Cuidador</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cargaHorariaSemanal">Carga horária semanal:</label>
+                <select id="cargaHorariaSemanal" name="cargaHorariaSemanal" placeholder="Escolha a carga horária exercida" required>
+                    <option value="">Selecione</option>
+                    <option value="20 Horas">20 Horas</option>
+                    <option value="30 Horas">30 Horas</option>
+                    <option value="40 Horas">40 Horas</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="escolaLotacao">Lotação:</label>
+                <select id="escolaLotacao" name="escolaLotacao" placeholder="Escolha o seu local de trabalho" required>
+                    <option value="">Selecione</option>
+                    <option value="Divino Pai Eterno">Divino Pai Eterno</option>
+                    <option value="Eurico Gaspar Dutra">Eurico Gaspar Dutra</option>
+                    <option value="Joaquim Correa Mendes">Joaquim Correa Mendes</option>
+                    <option value="Joaquim Pedro da Silva">Joaquim Pedro da Silva</option>
+                    <option value="José Antônio dos Reis">José Antônio dos Reis</option>
+                    <option value="Lúcia Gonçalves de Araújo">Lúcia Gonçalves de Araújo</option>
+                    <option value="Manoel Messias de Oliveira">Manoel Messias de Oliveira</option>
+                    <option value="Maria Angelina dos Santos">Maria Angelina dos Santos</option>
+                    <option value="Professor Magalhães Neto">Professor Magalhães Neto</option>
+                    <option value="Reino da Alegria">Reino da Alegria</option>
+                    <option value="Rui Barbosa - Vereda">Rui Barbosa - Vereda</option>
+                    <option value="Rui Barbosa - Sede">Rui Barbosa - Sede</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                    <option value="São Jorge">São Jorge</option>
+                    <option value="Tarcício Augusto da Silva">Tarcício Augusto da Silva</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="zonaResidencia">Zona da residência:</label>
+                <select id="zonaResidencia" name="zonaResidencia" required>
+                    <option value="">Selecione</option>
+                    <option value="Urbana">Urbana</option>
+                    <option value="Rural">Rural</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ufResidencia">UF de residência:</label>
+                <select id="ufResidencia" name="ufResidencia" required>
+                    <option value="">Selecione</option>
+                    <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="PI">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cidadeResidencia">Cidade de residência:</label>
+                <input type="text" id="cidadeResidencia" name="cidadeResidencia" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required>
+            </div>
+
+            <div class="form-group">
+                <label for="endereco">Endereço de residência:</label>
+                <input type="text" id="endereco" name="endereco" required>
+            </div>
+
+            <div class="form-group">
+                <label for="numeroResidencia">Nº da residência:</label>
+                <input type="text" id="numeroResidencia" name="numeroResidencia" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" required>
+            </div>
+
+            <div class="form-group">
+                <label for="escolaridade">Escolaridade:</label>
+                <select id="escolaridade" name="escolaridade" required>
+                    <option value="">Selecione</option>
+                    <option value="Fundamental Incompleto">Fundamental Incompleto</option>
+                    <option value="Fundamental Completo">Fundamental Completo</option>
+                    <option value="Ensino Médio">Ensino Médio</option>
+                    <option value="Ensino Médio - Magistério">Ensino Médio - Magistério</option>
+                    <option value="Graduação">Graduação</option>
+                    <option value="Pós-graduação">Pós-graduação</option>
+                    <option value="Mestrado">Mestrado</option>
+                    <option value="Doutorado">Doutorado</option>
+                </select>
+            </div>
+
+            <button type="submit">Enviar Atualização Cadastral</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            let cpfInput = document.getElementById('cpf');
+            let rgInput = document.getElementById('rg');
+            let celularInput = document.getElementById('celular');
+
+            if (cpfInput.value.length !== 11 || isNaN(cpfInput.value)) {
+                alert("CPF deve conter 11 números.");
+                event.preventDefault(); // Impede o envio do formulário
+                cpfInput.focus();
+                return false;
+            }
+
+             if (isNaN(rgInput.value)) {
+                alert("RG deve conter apenas números.");
+                event.preventDefault();
+                rgInput.focus();
+                return false;
+            }
+
+            if (isNaN(celularInput.value)) {
+                alert("Celular deve conter apenas números.");
+                event.preventDefault();
+                celularInput.focus();
+                return false;
+            }
+
+            // Adicionar mais validações aqui se necessário
+            // alert("Formulário enviado com sucesso!"); // Esta linha foi comentada porque a mensagem de sucesso vem do Google Apps Script
+        });
+    </script>
+
+</body>
+</html>
