@@ -114,13 +114,13 @@
             </div>
 
             <div class="form-group">
-                <label for="cpf">CPF (Apenas números):</label>
-                <input type="text" id="cpf" name="cpf" maxlength="14" pattern="[0-9.-]*" placeholder="Apenas números" required>
+                <label for="cpf">CPF (Apenas os números):</label>
+                <input type="text" id="cpf" name="cpf" maxlength="14" pattern="[0-9.-]*" placeholder="Insira apenas os números, sem os símbolos" required>
             </div>
 
             <div class="form-group">
-                <label for="rg">RG (Apenas números):</label>
-                <input type="text" id="rg" name="rg" placeholder="Apenas números" required>
+                <label for="rg">RG (Apenas os números):</label>
+                <input type="text" id="rg" name="rg" placeholder="Insira apenas os números, sem os símbolos" required>
             </div>
 
             <div class="form-group">
@@ -193,17 +193,17 @@
 
             <div class="form-group">
                 <label for="municipioNascimento">Município de Nascimento:</label>
-                <input type="text" id="municipioNascimento" name="municipioNascimento" required>
+                <input type="text" id="municipioNascimento" name="municipioNascimento" placeholder="Insira aqui o nome da cidade onde você nasceu." required>
             </div>
 
             <div class="form-group">
                 <label for="celular">Nº de Celular (Com DDD, apenas números):</label>
-                <input type="text" id="celular" name="celular" placeholder="Com DDD, apenas números" pattern="[0-9]{10,11}" required>
+                <input type="text" id="celular" name="celular" placeholder="Insira apenas o nº de contato com DDD, sem símbolos" pattern="[0-9]{10,11}" required>
             </div>
 
             <div class="form-group">
                 <label for="email">Email de preferência:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
             </div>
 
             <div class="form-group">
@@ -220,7 +220,7 @@
 
             <div class="form-group">
               <label for="cargoFuncao">Cargo/Função no momento da contratação:</label>
-              <select id="cargoFuncao" name="cargoFuncao" placeholder="Escolha o cargo para o qual você foi contratado" required>
+              <select id="cargoFuncao" name="cargoFuncao" placeholder="Se você não é concursado, insira a função que você exerce hoje." required>
                   <option value="">Selecione</option>
                   <option value="Professor">Professor</option>
                   <option value="Diretor Escolar">Diretor Escolar</option>
@@ -244,17 +244,18 @@
           
           <div class="form-group">
             <label for="cargaHorariaSemanal">Carga horária semanal:</label>
-            <select id="cargaHorariaSemanal" name="cargaHorariaSemanal" placeholder="Escolha a carga horária exercida" required>
+            <select id="cargaHorariaSemanal" name="cargaHorariaSemanal" placeholder="Escolha a carga horária exercida." required>
                 <option value="">Selecione</option>
                 <option value="20 Horas">20 Horas</option>
                 <option value="30 Horas">30 Horas</option>
                 <option value="40 Horas">40 Horas</option>
+                <option value="Outro tipo de carga horária">Outro tipo de carga horária</option>
             </select>
         </div>
 
         <div class="form-group">
           <label for="escolaLotacao">Lotação:</label>
-          <select id="escolaLotacao" name="escolaLotacao" placeholder="Escolha o seu local de trabalho" required>
+          <select id="escolaLotacao" name="escolaLotacao" placeholder="Selecione a escola onde você trabalha" required>
               <option value="">Selecione</option>
               <option value="Divino Pai Eterno">Divino Pai Eterno</option>
               <option value="Eurico Gaspar Dutra">Eurico Gaspar Dutra</option>
@@ -277,7 +278,7 @@
 
             <div class="form-group">
                 <label for="zonaResidencia">Zona da residência:</label>
-                <select id="zonaResidencia" name="zonaResidencia" required>
+                <select id="zonaResidencia" name="zonaResidencia"  required>
                     <option value="">Selecione</option>
                     <option value="Urbana">Urbana</option>
                     <option value="Rural">Rural</option>
@@ -286,7 +287,7 @@
 
             <div class="form-group">
                 <label for="ufResidencia">UF de residência:</label>
-                <select id="ufResidencia" name="ufResidencia" required>
+                <select id="ufResidencia" name="ufResidencia" placeholder="Selecione o estado onde você mora." required>
                     <option value="">Selecione</option>
                     <option value="AC">AC</option>
                     <option value="AL">AL</option>
@@ -320,32 +321,32 @@
 
             <div class="form-group">
                 <label for="cidadeResidencia">Cidade de residência:</label>
-                <input type="text" id="cidadeResidencia" name="cidadeResidencia" required>
+                <input type="text" id="cidadeResidencia" name="cidadeResidencia" placeholder="Insira o nome da cidade onde você mora." required>
             </div>
 
             <div class="form-group">
                 <label for="cep">CEP:</label>
-                <input type="text" id="cep" name="cep" required>
+                <input type="text" id="cep" name="cep" placeholder="Insira o CEP da sua residência." required>
             </div>
 
             <div class="form-group">
                 <label for="endereco">Endereço (Assim como descrito na conta de energia):</label>
-                <input type="text" id="endereco" name="endereco" required>
+                <input type="text" id="endereco" name="endereco" placeholder="De preferência como aparece na sua conta de energia ou de água." required>
             </div>
 
             <div class="form-group">
                 <label for="numeroResidencia">Nº da residência:</label>
-                <input type="text" id="numeroResidencia" name="numeroResidencia" placeholder="Se não souber ou tiver nº coloque apenas 'SN'" required>
+                <input type="text" id="numeroResidencia" name="numeroResidencia" placeholder="Se não souber ou não tiver nº coloque apenas: SN" required>
             </div>
 
             <div class="form-group">
                 <label for="bairro">Bairro:</label>
-                <input type="text" id="bairro" name="bairro" required>
+                <input type="text" id="bairro" name="bairro" placeholder="Insira aqui o nome do bairro onde você mora ou o nome da sua localidade" required>
             </div>
 
             <div class="form-group">
               <label for="escolaridade">Escolaridade:</label>
-              <select id="escolaridade" name="escolaridade" required>
+              <select id="escolaridade" name="escolaridade" placeholder="Selecione o seu grau de escolaridade." required>
                   <option value="">Selecione</option>
                   <option value="Fundamental Incompleto">Fundamental Incompleto</option>
                   <option value="Fundamental Completo">Fundamental Completo</option>
